@@ -1,0 +1,120 @@
+$bright-lime:#4ceea7;
+$text: #2c2c2c;
+$off-white: #fafafa;
+$yellow-shadow: #fdfa69;
+$light-lime: #effdf3;
+
+@mixin flex($flex-direction, $flex-wrap, $justify-content, $align-items) {
+	display: flex;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+
+// reference @ https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+@mixin underline {
+	a {
+        position: relative;
+        
+	}
+	a::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+        height: 3px;
+        left: 0;
+		bottom: -5px;
+		background-color: $bright-lime;
+		visibility: hidden;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		-webkit-transition: all 0.3s ease-in-out 0s;
+	 	transition: all 0.3s ease-in-out 0s;
+	}	
+	a:hover::after {
+		visibility: visible;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+
+
+// Media Queries
+@mixin for-min-1500 {
+	@media (min-width: 1500px) { @content; }
+}
+
+@mixin for-ipad-pro {
+	@media (width: 1024px) and (height: 1336px) { @content; }
+}
+
+@mixin for-1500-break {
+	@media (max-width: 1500px) { @content; }
+}
+
+@mixin for-1400-break {
+	@media (max-width: 1400px) { @content; }
+}
+
+@mixin for-1300-break {
+	@media (max-width: 1300px) { @content; }
+}
+
+@mixin for-initial-header-break {
+	@media (max-width: 1200px) { @content; }
+}
+
+@mixin for-1100-break {
+	@media (max-width: 1100px) { @content; }
+}
+
+@mixin for-1000-break {
+	@media (max-width: 1000px) { @content; }
+}
+
+@mixin for-980-break {
+	@media (max-width: 980px) { @content; }
+}
+
+@mixin for-comment-icon {
+	@media (min-width: 901px) and (max-width: 1150px) { @content; }
+}
+
+@mixin for-900-break {
+	@media (max-width: 900px) { @content; }
+}
+
+@mixin for-850-break {
+	@media (max-width: 850px) { @content; }
+}
+
+@mixin for-800-break {
+	@media (max-width: 800px) { @content; }
+}
+
+@mixin for-700-break {
+	@media (max-width: 700px) { @content; }
+}
+
+// 600 break set at 614 to accommodate home page blog post break
+@mixin for-600-break {
+	@media (max-width: 614px) { @content; }
+}
+
+@mixin for-500-break {
+	@media (max-width: 500px) { @content; }
+}
+
+@mixin for-450-break {
+	@media (max-width: 450px) { @content; }
+}
+
+@mixin for-400-break {
+	@media (max-width: 400px) { @content; }
+}
+
+@mixin for-350-break {
+	@media (max-width: 350px) { @content; }
+}

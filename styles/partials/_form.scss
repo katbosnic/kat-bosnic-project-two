@@ -1,0 +1,68 @@
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+form {
+    @include flex(column, nowrap, flex-start, flex-start);
+    fieldset,
+    input {
+        border: 0;
+        &:focus {
+        outline: 3px dotted $text;
+        }
+    }
+    fieldset {
+        width: 100%;
+        padding: 0;
+        @include flex(row, nowrap, flex-start, flex-start);
+        @include for-600-break {
+            display: block;
+        }
+        input {
+            border: 0;
+            border-bottom: 2px solid $bright-lime;
+            width: calc(50% - 10px);
+            @include for-600-break {
+                width: 100%;
+            }
+            &:last-of-type {
+                margin-left: 20px;
+                @include for-600-break {
+                margin-left: 0;
+                }
+            }
+            height: auto;
+            margin-bottom: 30px;
+            padding: 15px 20px;
+        }
+    }
+    textarea {
+        padding: 15px 20px;
+        border: 2px solid $bright-lime;
+        width: 100%;
+        height: 300px;
+        font-size: 2rem;
+        &:focus {
+        outline: 3px dotted $text;
+        }
+    }
+    button{
+        width: 100%;
+        margin-top: 30px;
+        font-size: 2rem;
+        background: $bright-lime;
+        padding: 10px;
+    }
+}
+
+
+

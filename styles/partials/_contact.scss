@@ -1,0 +1,79 @@
+.contact-header {
+    background-image: url(../captured-final-assets/contact-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 70vh;
+    h1 {
+        text-align: center;
+    }
+}
+
+.contact-main-page {
+    padding: 10% 0 20%;
+    .wrapper {
+        @include flex(row, nowrap, flex-start, flex-start);
+        @include for-1100-break {
+            @include flex(column, nowrap, flex-start, center);
+        }
+        @include for-400-break {
+            width: 100%;
+        }
+    }
+    @include for-1100-break {
+        padding-top: 80px;
+    }
+    a {
+        i {
+        font-weight: normal;
+        transition: color 0.3s;
+        margin-right: 20px;
+        }
+        &:hover {
+            color: $bright-lime;
+        }
+    }   
+    h4 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin: 0;
+    }
+    main {
+        width: 70%;
+        position: relative;
+        @include for-1100-break {
+            order: 1;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+    }
+    aside {
+        width: 30%;
+        @include for-1100-break {
+            order: 2;
+            width: 100%;
+        }
+        @include for-400-break {
+            padding: 5%;
+        }
+    }
+    form {
+        padding: 10%;
+        width: 100%;
+        position: absolute;
+        @include for-1100-break {
+            position: static;
+            padding: 5%;
+        }
+        @include for-400-break {
+            box-shadow: none;
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        top: -300px;
+        left: 50px;
+    }
+
+}

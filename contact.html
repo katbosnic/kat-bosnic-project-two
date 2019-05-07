@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Captured 📷 | CONTACT</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'
+        integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i|Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='styles/style.css' />
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content.</a>
+    <header class="contact-header">
+
+        <!-- ===== mobile navigation hidden until 850px width ===== -->
+        <div class="mobile-nav">
+            <nav class="wrapper drop-down">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#home-about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="drop-click click1">MENU</button>
+            <button class="drop-click click2">CLOSE</button>
+        </div>
+
+        <!-- ===== desktop navigation hidden after 850px ===== -->
+        <nav class="desktop-nav wrapper">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#home-about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Get In Touch</h1>
+    </header>
+    <div class="contact-main-page background-green">
+        <div class="wrapper">
+            <aside id="#main-content">
+                <div class="social-media-icons">
+                    <a aria-label="Go to Captured Facebook page" href=""><i aria-hidden
+                            class="fab fa-facebook-f"></i></a>
+                    <a aria-label="Go to Captured Instagram page" href=""><i aria-hidden
+                            class="fab fa-instagram"></i></a>
+                    <a aria-label="Go to Captured Twitter page" href=""><i aria-hidden class="fab fa-twitter"></i></a>
+                    <a aria-label="Go to Captured WhatsApp" href=""><i aria-hidden class="fab fa-whatsapp"></i></a>
+                </div>
+                <h4>info@email.com</h4>
+                <p>123-456-7890</p>
+                <p>123 Queen Street West, Unit 10</p>
+                <p>Toronto, Ontario</p>
+                <p>M5V2D5</p>
+            </aside>
+            <main>
+                <form class="left-shadow background-grey" action="" id="contact-form">
+                    <fieldset>
+                        <label class="visually-hidden" for="name">Enter name here</label>
+                        <input class="background-grey" type="text" id="name" placeholder="Name">
+                        <label class="visually-hidden" for="email">Enter email here</label>
+                        <input class="background-grey" type="email" id="email" placeholder="Email address">
+                    </fieldset>
+                    <label class="visually-hidden" for="comment">Enter comment here</label>
+                    <textarea class="background-grey" form="contact-form" name="comment" id="comment" cols="30"
+                        rows="10" placeholder="Comment"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <footer class="contact-footer">
+        <p>Copyright &copy 2018 HackerYou</p>
+    </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // ===== Mobile nav =====
+        $(".drop-down").hide();
+        $(".click2").hide();
+        $(".click1").on("click", function () {
+            $(".drop-down").slideToggle("slow");
+            $(".click1").hide();
+            $(".click2").show();
+        });
+
+        $(".click2").on("click", function () {
+            $(".drop-down").slideToggle("slow");
+            $(".click2").hide();
+            $(".click1").show();
+        });
+
+
+        $(".drop-down a").on("click", function () {
+            $(".drop-down").slideToggle("slow");
+            $(".click2").hide();
+            $(".click1").show();
+        });
+    });
+</script>

@@ -1,0 +1,458 @@
+
+.home-header,
+.home-about {
+    height: 100vh;
+    @include for-1000-break {
+        height: 70vh;
+    }
+    @include for-700-break {
+        height: 90vh;
+    }
+    @include for-ipad-pro {
+        height: 60vh;
+    }
+}
+
+.home-header {
+    background-image: url(../captured-final-assets/header-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(column, nowrap, flex-end, center);
+    @include for-700-break {
+        @include flex(column, nowrap, center, center);
+    }
+    img {
+        @include for-1500-break {
+            width: 60vh;
+            top: 50vh; 
+        }
+        @include for-1400-break {
+            width: 50vh;
+            top: 60vh;
+        }
+
+        @include for-1000-break {
+            top: 35vh;
+            width: 40vh;
+        }
+        @include for-850-break {
+            display: none;
+        }
+
+        @include for-ipad-pro {
+            display: none;
+        }
+
+        width: 70vh;
+        position: absolute;
+        right: 0;
+        top: 40vh;
+        border-top: 40px solid $yellow-shadow;
+        border-left: 40px solid $yellow-shadow;
+        border-bottom: 40px solid $yellow-shadow;
+    }
+    h1 {
+        margin-bottom: 5%;
+        font-size: 10rem;
+        @include for-1100-break {
+            font-size: 8rem;
+        }
+        @include for-850-break {
+            align-self: flex-end;
+            margin-right: 10%;
+            text-shadow: -5px -5px 0 $yellow-shadow;
+        }
+        @include for-ipad-pro {
+            align-self: flex-end;
+            margin-right: 10%;
+            text-shadow: -5px -5px 0 $yellow-shadow;
+        }
+        @include for-700-break {
+            text-shadow: 3px 3px 0 
+            $off-white;
+            letter-spacing: 4px;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            &::before {
+                content:"";
+                position: absolute;
+                width: 60%;
+                height: 200%;
+                background-color: rgba(253, 250, 105, 0.3);
+                top: -90px;
+                left: -20px;
+                @include for-600-break {
+                    left: -10px;
+                }
+                @include for-450-break{
+                    top: -60px;
+                    left: -5px;
+                }
+                @include for-400-break {
+                    top: -50px;
+                }
+                background-size: 100%;
+                z-index: -1;
+            }
+            &::after {
+                content:"";
+                position: absolute;
+                width: 55%;
+                height: 200%;
+                background-color: rgba(253, 250, 105, 0.3);
+                top: -10px;
+                right: -20px;
+                @include for-600-break {
+                    right: -10px;
+                }
+                @include for-450-break {
+                    right: -5px;
+                }
+                background-size: 100%;
+                z-index: -1;
+            }
+        }
+        @include for-600-break {
+            font-size: 7rem;
+        }
+        @include for-450-break {
+            font-size: 6rem;
+        }
+        @include for-400-break {
+            font-size: 5rem;
+        }
+    }
+}
+
+.home-about {
+    @include flex(column, nowrap, center, center);
+    text-align: center;
+    height: 70vh;
+    @include for-ipad-pro {
+        height: 50vh;
+    }
+    p {
+        
+        width: 60%;
+        @include for-900-break {
+            width: 80%;
+        }
+        @include for-600-break {
+            width: 90%;
+        }
+    }
+    h2 {
+        
+        @include for-600-break {
+            width: 80%;
+        }
+    }
+}
+
+.more-home-about {
+    img,
+    .text-box {
+        flex-grow: 1;
+        display: block;
+    }
+    .text-box {
+        width: 50%;
+        @include for-1100-break {
+            width: 60%;
+        } 
+        @include for-800-break {
+            width: 70%;
+        }
+        @include for-600-break {
+            width: 80%;
+        }
+        @include for-400-break {
+            width: 90%;
+        }
+    }
+    img {
+        width: calc(50% - 80px);
+        @include for-1100-break {
+            width: 60%;
+        }
+        @include for-800-break {
+            width: 70%;
+        }
+        @include for-600-break {
+            width: 80%;
+        } 
+        @include for-400-break {
+            width: 90%;
+        }
+    }
+    @include flex(row, wrap, flex-start, center);
+    @include for-1100-break {
+        @include flex(column, nowrap, center, center);
+    }
+    .text-box:first-of-type {
+        padding-right: calc(100vw - 90%);
+        padding-left: calc(100vw - 95%);
+        @include for-min-1500 {
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+        margin-bottom: 50px;
+        margin-top: 50px;
+        @include for-1100-break {
+            padding-right: 0;
+            padding-left: 0;
+            order: 2;
+        } 
+    }
+    .text-box:last-of-type {
+        padding-left: calc(100vw - 90%);
+        padding-right: calc(100vw - 95%);
+        @include for-min-1500 {
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &:not(.left-align) {
+            text-align: right;
+        }
+        @include for-1100-break {
+            padding-right: 0;
+            padding-left: 0;
+            order: 4;
+        }
+    }
+    img:first-of-type {
+        margin-top: -100px;
+        margin-bottom: 40px;
+        margin-right: 80px;
+        @include for-initial-header-break {
+            margin-top: 0px;
+        }
+        @include for-1100-break {
+            margin-top: 50px;
+            margin-right: 0;
+            order: 1;
+            margin-bottom: 0;
+        } 
+    }
+    img:last-of-type {
+        margin-bottom: -100px;
+        margin-top: 40px;
+        margin-left: 80px;
+        @include for-initial-header-break {
+            margin-bottom: 60px;
+        }
+        @include for-1100-break {
+            margin-top: 40px;
+            margin-left: 0;
+            margin-bottom: 0;
+            order: 3;
+        } 
+    }
+}
+
+.home-shortcuts {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .shortcut {
+        width: 50%;
+        padding-left: 60px;
+        position: relative;
+        @include for-900-break {
+            width: 80%;
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }
+        @include for-600-break {
+            width: 90%;
+        }
+        @include for-400-break {
+            width: 110%;
+        }
+    }
+    .wrapper {
+        @include flex(row, wrap, flex-start, flex-start);
+        @include for-900-break {
+            @include flex(column, nowrap, center, center);
+        }
+    }
+    .shortcut::before {
+        content:"";
+        position: absolute;
+        left:0;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+    }
+    .shortcut-1::before {
+        background: url(../captured-final-assets/camera-solid.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-color: $bright-lime;
+        background-position: 10px;
+    }
+    .shortcut-2::before {
+        background: url(../captured-final-assets/users-solid.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-color: $bright-lime;
+        background-position: 10px;
+    }
+    .shortcut-3::before {
+        background: url(../captured-final-assets/file-solid.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-color: $bright-lime;
+        background-position: 15px;
+    }
+    .shortcut-4::before {
+        background: url(../captured-final-assets/phone-solid.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-color: $bright-lime;
+        background-position: 10px;
+    }
+}
+
+.banner{
+    img{
+        display: block;
+        width: 100vw;
+        object-fit: cover;
+        @include for-600-break {
+            height: 30vh;
+        }
+    }
+    
+}
+
+.profile {
+    .wrapper {
+        @include flex(row, wrap, flex-start, flex-start);
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    img {
+        width: calc(30% - 50px);
+        margin-right: 50px;
+        @include for-1100-break {
+            margin-right: 10px;
+            width: calc(30% - 10px);
+        }
+        @include for-800-break {
+            display: none;
+        }
+    }
+    .text-box {
+        width: calc(70% - 50px);
+        margin-left: 50px;
+        @include for-800-break {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include for-500-break {
+            text-align: center;
+        }
+        @include for-400-break {
+            width: 96%;
+        }
+        h2 {
+            @include for-800-break {
+                margin-left: 40px;
+                position: relative;
+                padding-left: 50px;
+                padding-bottom: 10px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: -40px;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 35px;
+                    background-image: url(../captured-final-assets/small-box.jpg);
+                    background-size: 70px;
+                    @include for-600-break {
+                        top: 10px;
+                    }
+                    @include for-500-break {
+                        width: 120px;
+                        height: 120px;
+                        background-size: 120px;
+                        border-radius: 60px;
+                        top: 10px;
+                        left: calc(31.8% + 10px);
+                    }
+                    @include for-400-break {
+                        left: calc(28% + 10px);
+                    }
+                    @include for-350-break {
+                        left: calc(26% + 10px);
+                    }
+                    
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    left: -50px;
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 45px;
+                    background-color: $yellow-shadow;
+                    background-size: 90px;
+                    @include for-600-break {
+                        top: 0;
+                    }
+                    @include for-500-break {
+                        width: 140px;
+                        height: 140px;
+                        background-size: 140px;
+                        border-radius: 70px;
+                        top: 0;
+                        left: 31.8%;
+                    }
+                    @include for-400-break {
+                        left: 28%;
+                    }
+                    @include for-350-break {
+                        left: 26%;
+                    }
+                }
+            }
+            @include for-500-break {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0;
+                padding-top: 140px;
+            }   
+        }
+    }
+}
+
+.picture-set {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .wrapper {
+        @include flex(row, nowrap, flex-start,center);
+    }
+    img:nth-of-type(2) {
+        margin: 0 30px;
+        @include for-700-break {
+            margin: 0 30px 0 0;
+        }
+        @include for-450-break {
+            display: none;
+        }
+    }
+    @include for-700-break {
+        img:first-child {
+            display: none;
+        }
+    }
+}
