@@ -52,14 +52,6 @@ $light-lime: #effdf3;
 	@media (width: 1024px) and (height: 1336px) { @content; }
 }
 
-@mixin for-1500-break {
-	@media (max-width: 1500px) { @content; }
-}
-
-@mixin for-1400-break {
-	@media (max-width: 1400px) { @content; }
-}
-
 @mixin for-1300-break {
 	@media (max-width: 1300px) { @content; }
 }

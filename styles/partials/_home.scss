@@ -22,34 +22,16 @@
         @include flex(column, nowrap, center, center);
     }
     img {
-        @include for-1500-break {
-            width: 60vh;
-            top: 50vh; 
-        }
-        @include for-1400-break {
-            width: 50vh;
-            top: 60vh;
-        }
-
-        @include for-1000-break {
-            top: 35vh;
-            width: 40vh;
-        }
-        @include for-850-break {
-            display: none;
-        }
-
-        @include for-ipad-pro {
-            display: none;
-        }
-
-        width: 70vh;
         position: absolute;
+        width: 40%;
         right: 0;
-        top: 40vh;
+        bottom: -10vh;
         border-top: 40px solid $yellow-shadow;
         border-left: 40px solid $yellow-shadow;
         border-bottom: 40px solid $yellow-shadow;
+        @include for-850-break {
+            display: none;
+        }
     }
     h1 {
         margin-bottom: 5%;
