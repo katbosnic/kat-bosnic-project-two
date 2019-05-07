@@ -14,6 +14,7 @@ $light-lime: #effdf3;
 
 
 // reference @ https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+// for the underline effect that starts from the middle and moves outwards on hover
 @mixin underline {
 	a {
         position: relative;
@@ -46,6 +47,7 @@ $light-lime: #effdf3;
 	@media (min-width: 1500px) { @content; }
 }
 
+// ipad pro has its own media query because of its awkward shape, the other media queries adjusted its layout in an unusable way
 @mixin for-ipad-pro {
 	@media (width: 1024px) and (height: 1336px) { @content; }
 }

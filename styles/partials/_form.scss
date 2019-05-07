@@ -1,3 +1,4 @@
+// this is to hide the labels from the browser but still makes them readable by screen readers
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
     width: 1px;

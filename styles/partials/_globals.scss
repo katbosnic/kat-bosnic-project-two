@@ -8,6 +8,8 @@ body {
     background-color: $light-lime;
 }
 
+// here there will be two wrappers 1) for contents that occupy a portion of the viewport width (i.e. .wrapper) and 2) for contents that extend to the edge of the max viewport width (i.e. max-wrapper)
+
 .wrapper {
     max-width: 1600px;
     width: 85%;

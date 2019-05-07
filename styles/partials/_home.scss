@@ -57,6 +57,7 @@
         @include for-1100-break {
             font-size: 8rem;
         }
+        // this will give the h1 a backdrop so that it stands out design-wise once the accent image is taken out
         @include for-850-break {
             align-self: flex-end;
             margin-right: 10%;
@@ -67,6 +68,8 @@
             margin-right: 10%;
             text-shadow: -5px -5px 0 $yellow-shadow;
         }
+
+        // this will give the h1 a background effect to add bit of pop to the design
         @include for-700-break {
             text-shadow: 3px 3px 0 
             $off-white;
@@ -93,6 +96,7 @@
                     top: -50px;
                 }
                 background-size: 100%;
+                // puts the h1 in front of the before and after pseudo elements
                 z-index: -1;
             }
             &::after {

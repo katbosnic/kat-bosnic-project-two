@@ -165,21 +165,26 @@
         });
 
         // ===== Mobile nav =====
+
+        // hide the drop-down and the close button
         $(".drop-down").hide();
         $(".click2").hide();
+
+        // when menu is clicked, toggle the drop-down open, hide the menu button, show the close button
         $(".click1").on("click", function () {
             $(".drop-down").slideToggle("slow");
             $(".click1").hide();
             $(".click2").show();
         });
 
+        // when the close button is clicked, toggle the drop-down closed, hide the close button, show the menu button
         $(".click2").on("click", function () {
             $(".drop-down").slideToggle("slow");
             $(".click2").hide();
             $(".click1").show();
         });
 
-
+        // when one of the anchor tags are clicked, toggle the drop-down closed, hide the close button, show the menu button
         $(".drop-down a").on("click", function () {
             $(".drop-down").slideToggle("slow");
             $(".click2").hide();
