@@ -115,6 +115,7 @@
     @include flex(column, nowrap, center, center);
     text-align: center;
     height: 70vh;
+    min-height: 400px;
     @include for-ipad-pro {
         height: 50vh;
     }

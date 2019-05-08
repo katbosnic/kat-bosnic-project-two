@@ -684,7 +684,8 @@ nav {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  height: 70vh; }
+  height: 70vh;
+  min-height: 400px; }
   @media (width: 1024px) and (height: 1336px) {
     .home-about {
       height: 50vh; } }
